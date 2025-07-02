@@ -8,4 +8,4 @@
 docker run -it --rm \
   -p 5678:5678 \
   -v ~/.n8n:/home/node/.n8n \
-  你的Docker用户名/n8n-chinese:latest
+  a1007479270/n8n-chinese:latest

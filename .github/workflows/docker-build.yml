@@ -17,7 +17,7 @@ jobs:
       - name: Get latest n8n version
         id: n8n_version
         run: |
-          VERSION=$(curl -s https://api.github.com/repos/n8n-io/n8n/releases/latest | jq -r .tag_name)
+          VERSION=$(curl -s https://api.github.com/repos/n8n-io/n8n/releases/latest | jq -r .tag_name | sed 's/n8n@//')
           echo "version=${VERSION}" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
@@ -40,5 +40,5 @@ jobs:
           build-args: |
             N8N_VERSION=${{ steps.n8n_version.outputs.version }}
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/n8n-chinese:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/n8n-chinese:${{ steps.n8n_version.outputs.version }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/n8ncn:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/n8ncn:${{ steps.n8n_version.outputs.version }}

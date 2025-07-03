@@ -14,4 +14,11 @@ docker run -it --rm \
   -v ~/.n8n:/home/node/.n8n \
   -e N8N_DEFAULT_LOCALE=zh-CN \
   a1007479270gm/n8ncn:latest
+```
+
+## 交流群
+
+扫描下方二维码加入交流群，讨论n8n使用心得和自动化方案：
+
+![n8n中文版交流群](img/1751552881730.jpg)
   
